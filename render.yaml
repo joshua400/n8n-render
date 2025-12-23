@@ -1,24 +1,15 @@
 services:
   - type: web
     name: n8n-render
-    env: node
+    env: docker
     plan: free
-    buildCommand: npm install
-    startCommand: npm start
+    dockerfilePath: ./Dockerfile
     envVars:
-      - key: NODE_VERSION
-        value: 20.19.0
-      - key: N8N_PORT
-        value: 5678
-      - key: N8N_PROTOCOL
-        value: https
-      - key: N8N_HOST
-        value: n8n-render.onrender.com
-      - key: WEBHOOK_URL
-        value: https://n8n-render.onrender.com
       - key: N8N_BASIC_AUTH_ACTIVE
         value: "true"
       - key: N8N_BASIC_AUTH_USER
-        value: adminx
+        value: admin
       - key: N8N_BASIC_AUTH_PASSWORD
         value: Joshua@170207
+      - key: WEBHOOK_URL
+        value: https://n8n-render.onrender.com
