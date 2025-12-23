@@ -7,9 +7,7 @@
   },
   "dependencies": {
     "n8n": "^1.0.0",
-    "sqlite3": "^5.1.7"
-  },
-  "engines": {
-    "node": "18.x"
+    "sqlite3": "^5.1.6",
+    "express": "4.19.2"
   }
 }
